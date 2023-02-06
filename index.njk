@@ -1,0 +1,14 @@
+<h1>{{ title }}</h1>
+
+{% macro li(name, type='text') %}
+  <div class="field">
+    {{ name }}
+  </div>
+{% endmacro %}
+
+<ul>
+  {% for item in items %}
+    <li>{{ li(item) }}</li>
+    <li>{% include "item.njk" %}</li>
+  {% endfor %}
+</ul>

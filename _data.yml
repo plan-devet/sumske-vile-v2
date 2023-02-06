@@ -1,0 +1,9 @@
+layout: layout.njk
+title: Pero Zdero
+items:
+  - prvi
+  - drugi
+  - treci
+  - 1
+  - 2
+  - 1234.56
