@@ -32,6 +32,21 @@ function modal(id) {
   return id.startsWith("PM") ? "modal-parking" : "modal-spremiste";
 }
 
+function idToTip(id) {
+  if (id.startsWith("PGM")) {
+    return "parkirno garažno mjesto"
+  }
+  if (id.startsWith("GM")) {
+    return "garažno mjesto"
+  }
+  if (id.startsWith("PM")) {
+    return "parkirno mjesto"
+  }
+  if (id.startsWith("SP")) {
+    return "spremište"
+  }
+  return "?"
+}
 
 const site = lume();
 site.copy("assets", ".");
@@ -40,6 +55,7 @@ site.filter("numeric", numeric);
 site.filter("kat", kat);
 site.filter("toID", toID);
 site.filter("modal", modal);
+site.filter("idToTip", idToTip);
 
 site.use(minifyHTML());
 export default site;

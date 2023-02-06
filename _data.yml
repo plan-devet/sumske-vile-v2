@@ -240,58 +240,40 @@ stanovi:
     cijena: 3800
 parkirnaMjesta:
   - id: PGM 01
-    tip: parkirno garažno mjesto
     povrsina: 12.9
   - id: PGM 02
-    tip: parkirno garažno mjesto
     povrsina: 13.4
   - id: PGM 03
-    tip: parkirno garažno mjesto
     povrsina: 25.1
   - id: GM 04
-    tip: garažno mjesto
     povrsina: 27.9
   - id: GM 05
-    tip: garažno mjesto
     povrsina: 20.4
   - id: PGM 06
-    tip: parkirno garažno mjesto
     povrsina: 12.9
   - id: PGM 07
-    tip: parkirno garažno mjesto
     povrsina: 13
   - id: PGM 08
-    tip: parkirno garažno mjesto
     povrsina: 12.2
   - id: PGM 09
-    tip: parkirno garažno mjesto
     povrsina: 12.9
   - id: PGM 10
-    tip: parkirno garažno mjesto
     povrsina: 13
   - id: PGM 11
-    tip: parkirno garažno mjesto
     povrsina: 22.9
   - id: GM 12
-    tip: garažno mjesto
     povrsina: 14.9
   - id: GM 13
-    tip: garažno mjesto
     povrsina: 19.2
   - id: PGM 14
-    tip: parkirno garažno mjesto
     povrsina: 12.9
   - id: PGM 15
-    tip: parkirno garažno mjesto
     povrsina: 13.5
   - id: PGM 16
-    tip: parkirno garažno mjesto
     povrsina: 13
   - id: PM 17
-    tip: parkirno mjesto
     povrsina: 12.5
   - id: PM 18
-    tip: parkirno mjesto
     povrsina: 12.5
 spremista:
   - id: SP 01
