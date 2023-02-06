@@ -238,83 +238,83 @@ stanovi:
     prodajno: 109.03
     ukupno: 140.3
     cijena: 3800
-parkings:
-  - code: PGM 01
-    type: parkirno garažno mjesto
-    area: 12.9
-  - code: PGM 02
-    type: parkirno garažno mjesto
-    area: 13.4
-  - code: PGM 03
-    type: parkirno garažno mjesto
-    area: 25.1
-  - code: GM 04
-    type: garažno mjesto
-    area: 27.9
-  - code: GM 05
-    type: garažno mjesto
-    area: 20.4
-  - code: PGM 06
-    type: parkirno garažno mjesto
-    area: 12.9
-  - code: PGM 07
-    type: parkirno garažno mjesto
-    area: 13
-  - code: PGM 08
-    type: parkirno garažno mjesto
-    area: 12.2
-  - code: PGM 09
-    type: parkirno garažno mjesto
-    area: 12.9
-  - code: PGM 10
-    type: parkirno garažno mjesto
-    area: 13
-  - code: PGM 11
-    type: parkirno garažno mjesto
-    area: 22.9
-  - code: GM 12
-    type: garažno mjesto
-    area: 14.9
-  - code: GM 13
-    type: garažno mjesto
-    area: 19.2
-  - code: PGM 14
-    type: parkirno garažno mjesto
-    area: 12.9
-  - code: PGM 15
-    type: parkirno garažno mjesto
-    area: 13.5
-  - code: PGM 16
-    type: parkirno garažno mjesto
-    area: 13
-  - code: PM 17
-    type: parkirno mjesto
-    area: 12.5
-  - code: PM 18
-    type: parkirno mjesto
-    area: 12.5
+parkirnaMjesta:
+  - id: PGM 01
+    tip: parkirno garažno mjesto
+    povrsina: 12.9
+  - id: PGM 02
+    tip: parkirno garažno mjesto
+    povrsina: 13.4
+  - id: PGM 03
+    tip: parkirno garažno mjesto
+    povrsina: 25.1
+  - id: GM 04
+    tip: garažno mjesto
+    povrsina: 27.9
+  - id: GM 05
+    tip: garažno mjesto
+    povrsina: 20.4
+  - id: PGM 06
+    tip: parkirno garažno mjesto
+    povrsina: 12.9
+  - id: PGM 07
+    tip: parkirno garažno mjesto
+    povrsina: 13
+  - id: PGM 08
+    tip: parkirno garažno mjesto
+    povrsina: 12.2
+  - id: PGM 09
+    tip: parkirno garažno mjesto
+    povrsina: 12.9
+  - id: PGM 10
+    tip: parkirno garažno mjesto
+    povrsina: 13
+  - id: PGM 11
+    tip: parkirno garažno mjesto
+    povrsina: 22.9
+  - id: GM 12
+    tip: garažno mjesto
+    povrsina: 14.9
+  - id: GM 13
+    tip: garažno mjesto
+    povrsina: 19.2
+  - id: PGM 14
+    tip: parkirno garažno mjesto
+    povrsina: 12.9
+  - id: PGM 15
+    tip: parkirno garažno mjesto
+    povrsina: 13.5
+  - id: PGM 16
+    tip: parkirno garažno mjesto
+    povrsina: 13
+  - id: PM 17
+    tip: parkirno mjesto
+    povrsina: 12.5
+  - id: PM 18
+    tip: parkirno mjesto
+    povrsina: 12.5
 spremista:
-  - code: SP 01
-    area: 6.8
-  - code: SP 02
-    area: 7.3
-  - code: SP 03
-    area: 7.3
-  - code: SP 04
-    area: 7.3
-  - code: SP 05
-    area: 6.8
-  - code: SP 06
-    area: 6.8
-  - code: SP 07
-    area: 6.8
-  - code: SP 08
-    area: 7.3
-  - code: SP 09
-    area: 7.3
-  - code: SP 10
-    area: 7
-  - code: SP 11
-    area: 6.8
-  - code: SP 12
-    area: 6.4
+  - id: SP 01
+    povrsina: 6.8
+  - id: SP 02
+    povrsina: 7.3
+  - id: SP 03
+    povrsina: 7.3
+  - id: SP 04
+    povrsina: 7.3
+  - id: SP 05
+    povrsina: 6.8
+  - id: SP 06
+    povrsina: 6.8
+  - id: SP 07
+    povrsina: 6.8
+  - id: SP 08
+    povrsina: 7.3
+  - id: SP 09
+    povrsina: 7.3
+  - id: SP 10
+    povrsina: 7
+  - id: SP 11
+    povrsina: 6.8
+  - id: SP 12
+    povrsina: 6.4

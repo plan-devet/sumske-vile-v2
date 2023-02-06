@@ -15,7 +15,7 @@ function toID(code) {
   return code.replace(" ", "-").toLowerCase()
 }
 
-export function numeric(a, digits) {
+function numeric(a, digits) {
   if (!a) {
     return "-";
   }
@@ -28,6 +28,10 @@ export function numeric(a, digits) {
   return a.map(e => currency(e, digits)).join(" | ");
 }
 
+function modal(id) {
+  return id.startsWith("PM") ? "modal-parking" : "modal-spremiste";
+}
+
 
 const site = lume();
 site.copy("assets", ".");
@@ -35,6 +39,7 @@ site.filter("currency", currency);
 site.filter("numeric", numeric);
 site.filter("kat", kat);
 site.filter("toID", toID);
+site.filter("modal", modal);
 
 site.use(minifyHTML());
 export default site;
