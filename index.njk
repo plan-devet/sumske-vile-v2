@@ -1,14 +1,15 @@
-<h1>{{ title }}</h1>
+{% include "svg.njk" %}
+{% include "header.njk" %}
 
-{% macro li(name, type='text') %}
-  <div class="field">
-    {{ name }}
-  </div>
-{% endmacro %}
+<div class="container-xxl py-4 mx-auto"
+     data-bs-spy="scroll"
+     data-bs-target="#navbarSupportedContent"
+     data-bs-smooth-scroll="true">
 
-<ul>
-  {% for item in items %}
-    <li>{{ li(item) }}</li>
-    <li>{% include "item.njk" %}</li>
-  {% endfor %}
-</ul>
+    <section>{% include "carousel.njk" %}</section>
+    <section>{% include "stanovi.njk" %}</section>
+    <section>{# parkirna_mjesta.hbs#}</section>
+    <section>{# spremista.hbs#}</section>
+    <section>{# kontakt.hbs#}</section>
+    {% include "footer.njk" %}
+</div>

@@ -1,0 +1,141 @@
+{% import "snipets.njk" as snipet %}
+
+{% macro row(stan) %}
+    <tr>
+        <td class="text-nowrap">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-stan-{{ stan.stan | toID }}">
+                {{stan.stan}}
+            </a>
+        </td>
+        <td class="text-center">{{stan.kat | kat}}</td>
+        <td class="text-center">{{stan.soba.length}}</td>
+        <td class="text-center">{{stan.prodajno | numeric }}</td>
+        <td class="text-center">{{ snipet.email("Upit za stan " + stan.stan) }}</td>
+        <td class="text-center">{{stan.soba | numeric }}</td>
+        <td class="text-center">{{stan.boravak | numeric }}</td>
+        <td class="text-center">{{stan.kuhinja | numeric }}</td>
+        <td class="text-center">{{stan.kupaonica | numeric }}</td>
+        <td class="text-center">{{stan.loggia | numeric }}</td>
+        <td class="text-center">{{stan.terasa | numeric }}</td>
+        <td class="text-center">{{stan.vrt | numeric }}</td>
+        <td class="text-center">{{stan.ukupno | numeric }}</td>
+        <td class="text-center">{{stan.prodajno | numeric }}</td>
+    </tr>
+{% endmacro %}
+
+<hr class="mt-5 mb-3">
+<h2 id="stanovi" class="section">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg-icon" viewBox="0 0 16 16">
+        <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"/>
+        <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"/>
+    </svg>
+    Stanovi</h2>
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead class="table-bordered table-light">
+            <tr>
+                <th colspan="5"></th>
+                <th colspan="9" class="text-center">površine</th>
+            </tr>
+            <tr>
+                <th scope="col">stan</th>
+                <th class="text-center" scope="col">kat</th>
+                <th class="text-center" scope="col">#&nbsp;soba</th>
+                <th class="text-center" scope="col">površina</th>
+                <!--
+                     <th class="text-center" scope="col">cijena</th>
+                -->
+                <th class="text-center" scope="col">&nbsp</th>
+
+                <th class="text-center" scope="col">sobe</th>
+                <th class="text-center" scope="col">boravak</th>
+                <th class="text-center" scope="col">kuhinja</th>
+                <th class="text-center" scope="col">kupaonica</th>
+
+                <th class="text-center" scope="col">
+                    <a data-bs-toggle="tooltip" data-bs-title="U prodajnoj površini loggia se računa s koeficijentom 0,75">loggia<sup>*</sup></a>
+                </th>
+                <th class="text-center" scope="col">
+                    <a data-bs-toggle="tooltip" data-bs-title="U prodajnoj površini terasa se računa s koeficijentom 0,5">treasa<sup>*</sup></a>
+                </th>
+                <th class="text-center" scope="col">
+                    <a data-bs-toggle="tooltip" data-bs-title="U prodajnoj površini vrt se računa s koeficijentom 0,25">vrt<sup>*</sup></a>
+                </th>
+                <th class="text-center" scope="col">ukupno</th>
+                <th class="text-center" scope="col">prodajno</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for stan in stanovi %}
+                {{ row(stan) }}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% macro modal(stan) %}
+    <div class="modal" tabindex="-1" id="modal-stan-{{ stan.stan | toID }}" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        {{ stan.stan }}
+                        <i class="bi bi-three-dots-vertical"></i>
+                        {{ stan.kat | kat }}
+                        <i class="bi bi-three-dots-vertical"></i>
+                        {{ stan.prodajno | numeric }} m<sup>2</sup>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container-xl">
+
+                    <div class="row">
+                        <div class="col-md-6 p-2">
+                            <div class="card border-secondary">
+                                <div class="card-header">Pozicija stana na tlocrtu</div>
+                                <div class="card-body">
+                                    <img class="card-img-top" src="images/{{ stan.stan | toID }}/p.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 p-2">
+                            <div class="card border-secondary">
+                                <div class="card-header">Pozicija stana na na južnom pročelju</div>
+                                <div class="card-body">
+                                    <img class="card-img-top" src="images/{{ stan.stan | toID }}/r.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 p-2">
+                            <div class="card border-secondary">
+                                <div class="card-header">Tlocrt</div>
+                                <div class="card-body">
+                                    <img class="card-img-top" src="images/{{ stan.stan | toID }}/t.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 p-2">
+                            <div class="card border-secondary">
+                                <div class="card-header">Iskaz površina</div>
+                                <div class="card-body">
+                                    <img class="card-img-top" src="images/{{ stan.stan | toID }}/v.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% for stan in stanovi %}
+    {{ modal(stan) }}
+{% endfor %}

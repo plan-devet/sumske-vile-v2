@@ -1,0 +1,8 @@
+{% macro email(subject) %}
+    <a href="mailto:prodaja@plandevet.hr?subject={{subject}}"
+       data-bs-toggle="tooltip"
+       data-bs-title="{{subject}}"
+    >
+        <i class="bi-envelope-at"></i>
+    </a>
+{% endmacro %}
