@@ -49,7 +49,7 @@ function idToTip(id) {
 }
 
 const site = lume();
-site.copy("assets", ".");
+
 site.filter("currency", currency);
 site.filter("numeric", numeric);
 site.filter("kat", kat);
@@ -57,5 +57,6 @@ site.filter("toID", toID);
 site.filter("modal", modal);
 site.filter("idToTip", idToTip);
 
+site.copy("assets", ".");
 site.use(minifyHTML());
 export default site;
