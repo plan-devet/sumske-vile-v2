@@ -1,0 +1,21 @@
+/* Allow zoom on mobile
+   ref: https://stackoverflow.com/questions/69823936/how-to-allow-pinch-zoom-and-swipe-in-bootstrap-carousel */
+.carousel.pointer-event {
+  touch-action: pan-y pinch-zoom;
+}
+
+img.card-img-top {
+  max-width: 100%;
+  max-height: auto;
+}
+
+/* Because we have sticky header */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Height for google location map */
+.location-map {
+  height: 50vh;
+  max-height: 600px;
+}
